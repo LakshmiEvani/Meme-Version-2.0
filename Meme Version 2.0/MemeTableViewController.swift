@@ -15,7 +15,7 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     var memes: [Meme]{
         
-        return (UIApplication.sharedApplication().delegate as! AppDelegate).memes
+        return (UIApplication.sharedApplication().delegate as? AppDelegate)!.memes
         
     }
     

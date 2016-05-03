@@ -128,7 +128,7 @@
         <!--Sent Memes-->
         <scene sceneID="lSQ-6U-gAG">
             <objects>
-                <viewController storyboardIdentifier="MemeTableViewController" id="Yo8-ZE-AnG" customClass="MemeTableViewController" customModule="Meme Version 2.0" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemeTableViewController" id="Yo8-ZE-AnG" customClass="MemeTableViewController" customModule="Meme_Version_2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5M7-Z5-hoy"/>
                         <viewControllerLayoutGuide type="bottom" id="ZyN-G5-7xH"/>
