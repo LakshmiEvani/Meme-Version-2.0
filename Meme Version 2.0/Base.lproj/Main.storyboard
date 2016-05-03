@@ -31,14 +31,14 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bPW-cy-Ugo">
-                                <rect key="frame" x="-3" y="44" width="327" height="480"/>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b4V-4X-zmR">
                                 <rect key="frame" x="8" y="86" width="296" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bPW-cy-Ugo">
+                                <rect key="frame" x="-3" y="44" width="327" height="480"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -74,8 +74,10 @@
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="bottomText" destination="tUA-oC-nJK" id="cng-6i-7gX"/>
                         <outlet property="cameraButton" destination="WNL-5H-704" id="tP5-2v-fTE"/>
                         <outlet property="imagePickerView" destination="bPW-cy-Ugo" id="o40-kf-qso"/>
+                        <outlet property="navigationBar" destination="ry5-kq-6kR" id="4Dd-cq-IFR"/>
                         <outlet property="shareButton" destination="rWp-9S-BQ2" id="iQF-5d-RQW"/>
                         <outlet property="topText" destination="b4V-4X-zmR" id="rgA-HS-xYh"/>
                     </connections>
@@ -187,6 +189,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="meMeTableView" destination="Lh8-Qh-fyQ" id="Piq-SK-VEC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tiR-uP-p3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -259,6 +264,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="ImageCollectionView" destination="lJm-mC-UaH" id="bXb-G5-T8E"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iLt-ol-gij" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -276,16 +284,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T6a-It-XYK">
-                                <rect key="frame" x="8" y="464" width="296" height="17"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XcG-3p-cHx">
+                                <rect key="frame" x="-11" y="45" width="343" height="479"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nkU-jJ-KW1">
+                                <rect key="frame" x="4" y="76" width="304" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XcG-3p-cHx">
-                                <rect key="frame" x="-3" y="44" width="327" height="480"/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nkU-jJ-KW1">
-                                <rect key="frame" x="8" y="86" width="296" height="17"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T6a-It-XYK">
+                                <rect key="frame" x="8" y="464" width="296" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
@@ -293,19 +301,40 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="nVE-8A-BIe" firstAttribute="top" secondItem="T6a-It-XYK" secondAttribute="bottom" constant="43" id="AIY-2n-Dyj"/>
-                            <constraint firstItem="nkU-jJ-KW1" firstAttribute="top" secondItem="9Pc-GI-AeF" secondAttribute="bottom" constant="66" id="B2c-5v-WfE"/>
-                            <constraint firstItem="nkU-jJ-KW1" firstAttribute="trailing" secondItem="AI2-pR-lwM" secondAttribute="trailingMargin" id="HNU-1A-Gwn"/>
+                            <constraint firstItem="nkU-jJ-KW1" firstAttribute="top" secondItem="9Pc-GI-AeF" secondAttribute="bottom" constant="56" id="B2c-5v-WfE"/>
+                            <constraint firstItem="nkU-jJ-KW1" firstAttribute="trailing" secondItem="AI2-pR-lwM" secondAttribute="trailingMargin" constant="4" id="HNU-1A-Gwn"/>
                             <constraint firstItem="XcG-3p-cHx" firstAttribute="centerX" secondItem="AI2-pR-lwM" secondAttribute="centerX" id="YYm-rk-Qvo"/>
-                            <constraint firstItem="XcG-3p-cHx" firstAttribute="leading" secondItem="AI2-pR-lwM" secondAttribute="leadingMargin" constant="-19" id="ZMe-FB-C6v"/>
-                            <constraint firstItem="nkU-jJ-KW1" firstAttribute="leading" secondItem="AI2-pR-lwM" secondAttribute="leadingMargin" constant="-8" id="jUK-Im-P1x"/>
-                            <constraint firstItem="nkU-jJ-KW1" firstAttribute="leading" secondItem="T6a-It-XYK" secondAttribute="leading" id="joh-ac-2sD"/>
+                            <constraint firstItem="XcG-3p-cHx" firstAttribute="leading" secondItem="AI2-pR-lwM" secondAttribute="leadingMargin" constant="-27" id="ZMe-FB-C6v"/>
+                            <constraint firstItem="nkU-jJ-KW1" firstAttribute="leading" secondItem="AI2-pR-lwM" secondAttribute="leadingMargin" constant="-12" id="jUK-Im-P1x"/>
+                            <constraint firstItem="nkU-jJ-KW1" firstAttribute="leading" secondItem="T6a-It-XYK" secondAttribute="leading" constant="-4" id="joh-ac-2sD"/>
                             <constraint firstItem="XcG-3p-cHx" firstAttribute="centerY" secondItem="AI2-pR-lwM" secondAttribute="centerY" id="nB1-QV-nnV"/>
                             <constraint firstItem="XcG-3p-cHx" firstAttribute="bottom" secondItem="nVE-8A-BIe" secondAttribute="top" id="tc5-1s-vaF"/>
-                            <constraint firstItem="nkU-jJ-KW1" firstAttribute="trailing" secondItem="T6a-It-XYK" secondAttribute="trailing" id="w1b-ss-Wnm"/>
+                            <constraint firstItem="nkU-jJ-KW1" firstAttribute="trailing" secondItem="T6a-It-XYK" secondAttribute="trailing" constant="4" id="w1b-ss-Wnm"/>
                         </constraints>
                     </view>
-                    <toolbarItems/>
-                    <nil key="simulatedBottomBarMetrics"/>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Lji-3R-aTY"/>
+                        <barButtonItem systemItem="edit" id="KdD-Rt-bvL">
+                            <connections>
+                                <action selector="pickAnImage:" destination="hKc-yw-vdA" id="vMi-95-DFD"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="qm6-iO-1dv">
+                            <connections>
+                                <action selector="EditMeme:" destination="gol-WO-G6T" id="VJW-an-K7Z"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="trash" id="UAT-Ea-2at">
+                            <connections>
+                                <action selector="DeleteMeme:" destination="gol-WO-G6T" id="CzY-R3-X8i"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="rjj-DJ-ddo"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="detailImageView" destination="XcG-3p-cHx" id="i8h-mo-Kkn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10s-tW-HdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -316,6 +345,6 @@
         <image name="memeImage" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Jfz-gd-8pk"/>
+        <segue reference="rQw-9D-3u9"/>
     </inferredMetricsTieBreakers>
 </document>

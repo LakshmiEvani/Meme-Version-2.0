@@ -15,7 +15,8 @@ class  MemeCollectionViewController: UICollectionViewController, UICollectionVie
     
     @IBOutlet var flowLayout: UICollectionViewFlowLayout!
     
-    var ImageCollectionView: UICollectionView!
+    @IBOutlet var ImageCollectionView: UICollectionView!
+ 
     
     //Images array
     

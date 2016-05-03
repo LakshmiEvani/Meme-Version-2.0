@@ -20,9 +20,10 @@ class MemeViewController: UIViewController,  UIImagePickerControllerDelegate, UI
     @IBOutlet weak var shareButton: UIBarButtonItem!
     
     @IBOutlet weak var navigationBar: UINavigationBar!
-    @IBOutlet weak var toolBar: UIToolbar!
+ 
     
-    var memes: [Meme] = []
+    var memes: Meme!
+    var memeEditIndex: Int!
     
     //Lifecycle Functions
     
@@ -160,6 +161,11 @@ class MemeViewController: UIViewController,  UIImagePickerControllerDelegate, UI
                 }
             }
             presentViewController(shareActivity, animated: true, completion: nil)
+            
+            if memes != nil {
+                
+                deleteMeme()
+            }
         }
     }
     
@@ -196,6 +202,13 @@ class MemeViewController: UIViewController,  UIImagePickerControllerDelegate, UI
         
         return memedImage
     }
+    
+    // delete old meme
+    func deleteMeme() {
+        
+        (UIApplication.sharedApplication().delegate as! AppDelegate).memes.removeAtIndex(memeEditIndex)
+    }
+
     
 }
 

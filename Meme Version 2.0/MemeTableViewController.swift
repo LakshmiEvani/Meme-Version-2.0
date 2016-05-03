@@ -74,7 +74,7 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
         if memes.count > 0 {
             
             Controller.meme = self.memes[indexPath.row]
-            
+            Controller.memeIndex = indexPath.row
             navigationController!.pushViewController(Controller, animated: true)
             
         }
