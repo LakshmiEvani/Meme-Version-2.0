@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
+class MemeTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
     
     // Variable Declaration
     

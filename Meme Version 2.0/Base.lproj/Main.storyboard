@@ -128,7 +128,7 @@
         <!--Sent Memes-->
         <scene sceneID="lSQ-6U-gAG">
             <objects>
-                <viewController storyboardIdentifier="MemeTableViewController" id="Yo8-ZE-AnG" customClass="MemeTableViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemeTableViewController" id="Yo8-ZE-AnG" customClass="MemeTableViewController" customModule="Meme Version 2.0" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5M7-Z5-hoy"/>
                         <viewControllerLayoutGuide type="bottom" id="ZyN-G5-7xH"/>
@@ -316,6 +316,6 @@
         <image name="memeImage" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rQw-9D-3u9"/>
+        <segue reference="Jfz-gd-8pk"/>
     </inferredMetricsTieBreakers>
 </document>
