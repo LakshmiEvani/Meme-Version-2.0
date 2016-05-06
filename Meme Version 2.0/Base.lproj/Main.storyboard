@@ -318,13 +318,13 @@
                                 <items>
                                     <barButtonItem systemItem="edit" id="s2m-bN-O1o">
                                         <connections>
-                                            <action selector="pickAnImage:" destination="88W-NJ-RgZ" id="7qH-ax-Dnw"/>
+                                            <action selector="EditMeme:" destination="88W-NJ-RgZ" id="2vr-Ef-PEI"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="3K3-cH-U9P"/>
                                     <barButtonItem systemItem="trash" id="dsq-Wp-tMf">
                                         <connections>
-                                            <action selector="pickAnImageFomCamera:" destination="88W-NJ-RgZ" id="3eq-kJ-uRP"/>
+                                            <action selector="DeleteMeme:" destination="88W-NJ-RgZ" id="cQf-Yo-eNa"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -353,6 +353,7 @@
                     <connections>
                         <outlet property="bottomText" destination="ABt-mC-lqm" id="X4N-d7-x6d"/>
                         <outlet property="cameraButton" destination="dsq-Wp-tMf" id="oeI-d4-CZs"/>
+                        <outlet property="detailImageView" destination="MNm-ze-7kK" id="36b-eo-pVx"/>
                         <outlet property="imagePickerView" destination="MNm-ze-7kK" id="AV0-Pg-ahc"/>
                         <outlet property="topText" destination="pQD-ia-XDU" id="mFU-sY-sWb"/>
                     </connections>
