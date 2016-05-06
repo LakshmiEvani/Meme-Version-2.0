@@ -21,6 +21,7 @@ class MemeViewController: UIViewController,  UIImagePickerControllerDelegate, UI
     
     @IBOutlet weak var navigationBar: UINavigationBar!
  
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
     
     var memes: Meme!
     var memeEditIndex: Int!
@@ -208,6 +209,14 @@ class MemeViewController: UIViewController,  UIImagePickerControllerDelegate, UI
         
         (UIApplication.sharedApplication().delegate as! AppDelegate).memes.removeAtIndex(memeEditIndex)
     }
+    
+    // Cancel button
+    
+    @IBAction func cancelView(sender: AnyObject) {
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 
     
 }
