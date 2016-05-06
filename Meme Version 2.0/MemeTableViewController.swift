@@ -28,8 +28,8 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewWillAppear(animated: Bool) {
         
         super.viewWillAppear(animated)
-        self.meMeTableView?.delegate = self
-        self.meMeTableView?.dataSource = self
+        self.meMeTableView.delegate = self
+        self.meMeTableView.dataSource = self
         meMeTableView?.reloadData()
         
     }
