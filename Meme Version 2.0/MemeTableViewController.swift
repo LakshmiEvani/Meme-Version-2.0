@@ -88,11 +88,5 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
         }
     }
     
-    @IBAction func addNewMeme(sender: AnyObject) {
-        let controller = self.storyboard?.instantiateViewControllerWithIdentifier("MemeViewController") as! MemeViewController
-        
-        presentViewController(controller, animated: true, completion: nil)
-    }
-
     
 }
