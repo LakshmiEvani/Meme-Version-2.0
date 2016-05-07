@@ -51,7 +51,6 @@ class  MemeCollectionViewController: UICollectionViewController, UICollectionVie
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         memes = appDelegate.memes
-        self.tabBarController?.tabBar.hidden = false
         self.ImageCollectionView?.delegate = self
         self.ImageCollectionView?.dataSource = self
         ImageCollectionView?.reloadData()
@@ -81,7 +80,6 @@ class  MemeCollectionViewController: UICollectionViewController, UICollectionVie
         if memes.count > 0 {
             
             cell.memeLabel?.text = "\(meme.topText) .. \(meme.bottomText)"
-            
             cell.imageMeme?.image = meme.image
             cell.imageMeme?.contentMode = UIViewContentMode.ScaleAspectFill
             cell.backgroundView = UIImageView(image: meme.memedImage)

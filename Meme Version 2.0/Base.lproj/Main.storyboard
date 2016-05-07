@@ -225,11 +225,7 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ucT-gg-FRp"/>
-                                    <barButtonItem systemItem="camera" id="CPL-P3-WGs">
-                                        <connections>
-                                            <action selector="pickAnImageFomCamera:" destination="9Wb-G1-68X" id="1Xh-FS-MXP"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <barButtonItem systemItem="camera" id="CPL-P3-WGs"/>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -268,7 +264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8QH-gs-qvS" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="799.4666666666667" y="675.91999999999996"/>
+            <point key="canvasLocation" x="931" y="703"/>
         </scene>
         <!--Meme Detail View Controller-->
         <scene sceneID="jpI-ph-YAE">
@@ -324,7 +320,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xAG-Rn-ncX" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1182" y="675"/>
+            <point key="canvasLocation" x="1328" y="684"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

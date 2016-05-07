@@ -68,7 +68,8 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
             
             cell.memeLabel?.text = "\(meme.topText) .. \(meme.bottomText)"
             cell.memeImage?.image = meme.memedImage
-            cell.memeImage?.contentMode = UIViewContentMode.ScaleAspectFit
+            cell.memeImage?.contentMode = UIViewContentMode.ScaleAspectFill
+            cell.backgroundView = UIImageView(image: meme.memedImage)
             
         }
         return cell
@@ -77,7 +78,7 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        let Controller = self.storyboard?.instantiateViewControllerWithIdentifier("MemeDetailController") as! MemeDetailViewController
+        let Controller = self.storyboard?.instantiateViewControllerWithIdentifier("MemeDetailViewController") as! MemeDetailViewController
         
         if memes.count > 0 {
             
