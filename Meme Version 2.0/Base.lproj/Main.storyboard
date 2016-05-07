@@ -290,9 +290,9 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="3K3-cH-U9P"/>
-                                    <barButtonItem systemItem="trash" id="dsq-Wp-tMf">
+                                    <barButtonItem systemItem="trash" id="Wyy-3r-CM1">
                                         <connections>
-                                            <action selector="DeleteMeme:" destination="88W-NJ-RgZ" id="bfe-JJ-zxW"/>
+                                            <action selector="DeleteMeme:" destination="88W-NJ-RgZ" id="aed-Ra-2Xe"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -313,9 +313,7 @@
                     <navigationItem key="navigationItem" id="slq-Sm-JCw"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="cameraButton" destination="dsq-Wp-tMf" id="oeI-d4-CZs"/>
-                        <outlet property="detailImageView" destination="MNm-ze-7kK" id="36b-eo-pVx"/>
-                        <outlet property="imagePickerView" destination="MNm-ze-7kK" id="AV0-Pg-ahc"/>
+                        <outlet property="detailImageView" destination="MNm-ze-7kK" id="Prn-Hp-3qy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xAG-Rn-ncX" sceneMemberID="firstResponder"/>

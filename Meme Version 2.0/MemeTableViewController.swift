@@ -43,15 +43,8 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
     // MARK: Table View Data Source
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        if memes.count > 0 {
-            
+
             return memes.count
-            
-        } else {
-            
-            return 0
-        }
         
     }
     
@@ -64,14 +57,11 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
         
         // Set image
         
-        if memes.count > 0 {
-            
             cell.memeLabel?.text = "\(meme.topText) .. \(meme.bottomText)"
             cell.memeImage?.image = meme.memedImage
             cell.memeImage?.contentMode = UIViewContentMode.ScaleAspectFill
             cell.backgroundView = UIImageView(image: meme.memedImage)
-            
-        }
+    
         return cell
     }
     
@@ -79,14 +69,11 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         let Controller = self.storyboard?.instantiateViewControllerWithIdentifier("MemeDetailViewController") as! MemeDetailViewController
-        
-        if memes.count > 0 {
-            
             Controller.meme = self.memes[indexPath.row]
             Controller.memeIndex = indexPath.row
             navigationController!.pushViewController(Controller, animated: true)
             
-        }
+
     }
     
     
