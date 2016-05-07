@@ -111,7 +111,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="meMeTableView" destination="Lh8-Qh-fyQ" id="Piq-SK-VEC"/>
-                        <segue destination="88W-NJ-RgZ" kind="push" id="PDo-8Z-o47"/>
+                        <segue destination="88W-NJ-RgZ" kind="push" identifier="TableViewSegue" id="PDo-8Z-o47"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tiR-uP-p3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -187,7 +187,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="ImageCollectionView" destination="lJm-mC-UaH" id="bXb-G5-T8E"/>
-                        <segue destination="88W-NJ-RgZ" kind="push" id="L3L-37-9HG"/>
+                        <segue destination="88W-NJ-RgZ" kind="push" identifier="CollectionViewSegue" id="L3L-37-9HG"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iLt-ol-gij" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -348,7 +348,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="memeImage" width="30" height="30"/>
+        <image name="memeImage" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="L3L-37-9HG"/>

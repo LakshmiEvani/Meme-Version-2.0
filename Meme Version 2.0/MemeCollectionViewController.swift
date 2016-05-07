@@ -16,29 +16,32 @@ class  MemeCollectionViewController: UICollectionViewController, UICollectionVie
     @IBOutlet var flowLayout: UICollectionViewFlowLayout!
     
     @IBOutlet var ImageCollectionView: UICollectionView!
- 
+    
     
     //Images array
     
-    var memes: [Meme] {
+    var memes: [Meme]!
         
-        return (UIApplication.sharedApplication().delegate as! AppDelegate).memes
-        
-    }
+    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     
+    
+    //Life Cycle Methods
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+        memes = appDelegate.memes
         
         //TODO: Implement flowLayout here.
         flowLayOut(self.view.frame.size)
+        
     }
     
     
     func flowLayOut(size:CGSize){
         
         let space: CGFloat = 3.0
-        let dimension1 = (view.frame.size.height - (2 * space))/2.0
+        let dimension1 = (view.frame.size.height - (2 * space))/3.0
         
         flowLayout?.minimumInteritemSpacing = space
         flowLayout?.minimumLineSpacing = space
@@ -47,6 +50,7 @@ class  MemeCollectionViewController: UICollectionViewController, UICollectionVie
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        memes = appDelegate.memes
         self.tabBarController?.tabBar.hidden = false
         self.ImageCollectionView?.delegate = self
         self.ImageCollectionView?.dataSource = self
@@ -79,8 +83,8 @@ class  MemeCollectionViewController: UICollectionViewController, UICollectionVie
             cell.memeLabel?.text = "\(meme.topText) .. \(meme.bottomText)"
             
             cell.imageMeme?.image = meme.image
-            cell.imageMeme?.contentMode = UIViewContentMode.ScaleAspectFit
-            
+            cell.imageMeme?.contentMode = UIViewContentMode.ScaleAspectFill
+            cell.backgroundView = UIImageView(image: meme.memedImage)
         }
         return cell
     }

@@ -217,7 +217,5 @@ class MemeViewController: UIViewController,  UIImagePickerControllerDelegate, UI
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-
-    
 }
 

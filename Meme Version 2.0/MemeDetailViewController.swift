@@ -31,7 +31,6 @@ class MemeDetailViewController:UIViewController {
     
     @IBAction func EditMeme(sender: AnyObject) {
         let memeEditorViewController = storyboard?.instantiateViewControllerWithIdentifier("MemeViewController") as! MemeViewController
-        
         memeEditorViewController.memes = meme
         memeEditorViewController.memeEditIndex = memeIndex
 
@@ -42,10 +41,10 @@ class MemeDetailViewController:UIViewController {
         
         (UIApplication.sharedApplication().delegate as! AppDelegate).memes.removeAtIndex(memeIndex)
         
-        navigationController?.popToRootViewControllerAnimated(true)
+        navigationController?.popViewControllerAnimated(true)
 
         
     }
-    
+
     
 }

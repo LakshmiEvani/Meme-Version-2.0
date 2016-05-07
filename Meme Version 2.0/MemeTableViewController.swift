@@ -9,27 +9,32 @@
 import Foundation
 import UIKit
 
-class MemeTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
+class MemeTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // Variable Declaration
     
-    var memes: [Meme]{
-        
-        return (UIApplication.sharedApplication().delegate as? AppDelegate)!.memes
-        
-    }
-    
+    var memes: [Meme]!
     
     @IBOutlet var meMeTableView: UITableView!
+    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
-    //life cycle method
     
+    //life cycle methods
+    
+   override func viewDidLoad() {
+        super.viewDidLoad()
+        memes = appDelegate.memes
+    
+    }
     
     override func viewWillAppear(animated: Bool) {
         
         super.viewWillAppear(animated)
-        self.meMeTableView.delegate = self
-        self.meMeTableView.dataSource = self
+        
+        meMeTableView.delegate = self
+        meMeTableView.dataSource = self
+       
+        memes = appDelegate.memes
         meMeTableView?.reloadData()
         
     }
@@ -71,6 +76,7 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         let Controller = self.storyboard?.instantiateViewControllerWithIdentifier("MemeDetailController") as! MemeDetailViewController
         
         if memes.count > 0 {
@@ -82,5 +88,11 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
         }
     }
     
+    @IBAction func addNewMeme(sender: AnyObject) {
+        let controller = self.storyboard?.instantiateViewControllerWithIdentifier("MemeViewController") as! MemeViewController
+        
+        presentViewController(controller, animated: true, completion: nil)
+    }
+
     
 }
