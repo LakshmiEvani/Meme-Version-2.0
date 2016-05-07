@@ -89,6 +89,8 @@ class  MemeCollectionViewController: UICollectionViewController, UICollectionVie
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath:NSIndexPath) {
         
+        ImageCollectionView.deselectItemAtIndexPath(indexPath, animated: true)
+        
         let controller = self.storyboard!.instantiateViewControllerWithIdentifier("MemeDetailViewController") as! MemeDetailViewController
         
         if memes.count > 0 {
