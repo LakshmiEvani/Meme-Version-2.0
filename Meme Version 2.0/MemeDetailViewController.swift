@@ -33,6 +33,7 @@ class MemeDetailViewController:UIViewController {
         let memeEditorViewController = storyboard?.instantiateViewControllerWithIdentifier("MemeViewController") as! MemeViewController
         memeEditorViewController.memes = meme
         memeEditorViewController.memeEditIndex = memeIndex
+        presentViewController(memeEditorViewController, animated: true, completion: nil)
 
         
     }

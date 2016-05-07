@@ -94,6 +94,7 @@ class  MemeCollectionViewController: UICollectionViewController, UICollectionVie
         if memes.count > 0 {
             
             controller.meme = self.memes[indexPath.row]
+            controller.memeIndex = indexPath.row
             self.navigationController!.pushViewController(controller, animated: true)
             
         }
