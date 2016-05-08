@@ -286,13 +286,13 @@
                                 <items>
                                     <barButtonItem systemItem="edit" id="s2m-bN-O1o">
                                         <connections>
-                                            <action selector="EditMeme:" destination="88W-NJ-RgZ" id="P6s-nm-mtk"/>
+                                            <action selector="editMeme:" destination="88W-NJ-RgZ" id="nsk-8H-a4b"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="3K3-cH-U9P"/>
                                     <barButtonItem systemItem="trash" id="Wyy-3r-CM1">
                                         <connections>
-                                            <action selector="DeleteMeme:" destination="88W-NJ-RgZ" id="aed-Ra-2Xe"/>
+                                            <action selector="deleteMeme:" destination="88W-NJ-RgZ" id="rgu-tB-xf0"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>

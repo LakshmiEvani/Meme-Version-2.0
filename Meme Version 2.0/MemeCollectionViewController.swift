@@ -15,7 +15,7 @@ class  MemeCollectionViewController: UICollectionViewController, UICollectionVie
     
     @IBOutlet var flowLayout: UICollectionViewFlowLayout!
     
-    @IBOutlet var ImageCollectionView: UICollectionView!
+    @IBOutlet var imageCollectionView: UICollectionView!
     
     
     //Images array
@@ -51,9 +51,9 @@ class  MemeCollectionViewController: UICollectionViewController, UICollectionVie
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         memes = appDelegate.memes
-        self.ImageCollectionView?.delegate = self
-        self.ImageCollectionView?.dataSource = self
-        ImageCollectionView?.reloadData()
+        imageCollectionView?.delegate = self
+        imageCollectionView?.dataSource = self
+        imageCollectionView?.reloadData()
         
     }
     
@@ -89,7 +89,7 @@ class  MemeCollectionViewController: UICollectionViewController, UICollectionVie
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath:NSIndexPath) {
         
-        ImageCollectionView.deselectItemAtIndexPath(indexPath, animated: true)
+        imageCollectionView.deselectItemAtIndexPath(indexPath, animated: true)
         
         let controller = self.storyboard!.instantiateViewControllerWithIdentifier("MemeDetailViewController") as! MemeDetailViewController
         
@@ -97,7 +97,7 @@ class  MemeCollectionViewController: UICollectionViewController, UICollectionVie
             
             controller.meme = self.memes[indexPath.row]
             controller.memeIndex = indexPath.row
-            self.navigationController!.pushViewController(controller, animated: true)
+            navigationController!.pushViewController(controller, animated: true)
             
         }
         
